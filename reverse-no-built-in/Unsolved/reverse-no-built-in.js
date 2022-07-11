@@ -3,7 +3,9 @@
 
 const reverse = (str) => {
     let backString = '';
+    // reverse iteration order
     for(let i = str.length-1; i>=0; i--){
+        // add a letter to the string
         backString+=str[i];
         console.log(i)
     }
