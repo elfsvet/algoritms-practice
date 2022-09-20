@@ -30,7 +30,11 @@ describe('leftRotation', () => {
 
   it(`should update the given array to [3, 1, 8, 0, 1] when given the array [0, 1, 3, 1, 8] and the number 4`, () => {
     const arr = [3, 1, 8, 0, 1];
+<<<<<<< HEAD
     const positions = 8;
+=======
+    const positions = 3;
+>>>>>>> f27ed9e228bd24405d1ea1fd453b0a7266ae9e0b
 
     leftRotation(arr, positions);
 
