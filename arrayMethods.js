@@ -52,6 +52,7 @@ console.log(arr.every(item => item >0)) //returns boolean if it's true and false
 console.log(arr.findIndex(item => item > 3)); // returns index of the first true much.
 console.log(arr);
 console.log(arr.reduce((acc, item) => acc+item))
+console.log(Array(10).fill(0)); //returns array of length 10 filled with 0's
 // console.log(arr);
 // console.log(arr);
 
