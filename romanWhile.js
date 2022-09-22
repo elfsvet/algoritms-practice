@@ -54,5 +54,4 @@ function convertToRoman(num) {
     }
     return result
 }
-
 console.log(convertToRoman(3499))
