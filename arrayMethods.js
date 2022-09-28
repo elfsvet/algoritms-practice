@@ -49,11 +49,14 @@ console.log(arr);
 console.log(arr.some(item => item >3)); //returns boolean if it's true and false if not
 console.log(arr.filter(item => item > 3));  // returns new array of true to condition elements
 console.log(arr.every(item => item >0)) //returns boolean if it's true and false if not
-console.log(arr.findIndex(item => item > 3)); // returns index of the first true much.
+console.log(arr.findIndex(item => item > 3)); // returns index of the first true much. if not -1
 console.log(arr);
 console.log(arr.reduce((acc, item) => acc+item))
 console.log(Array(10).fill(0)); //returns array of length 10 filled with 0's
-// console.log(arr);
+console.log(arr.indexOf(4)); // returns the index of the value
+console.log(arr.indexOf(14)); // if no value like this return -1
+
+
 // console.log(arr);
 
 
