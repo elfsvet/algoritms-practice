@@ -41,7 +41,7 @@ console.log(arr);
 console.log(arr.unshift(1)); // prints out the length of the array
 console.log(arr);
 console.log(arr.includes(10));
-console.log(arr.includes(5));
+console.log('Includes '+arr.includes(5));
 console.log(arr.map((item) => item + 6)); // returns new array
 console.log(arr);
 console.log(arr.find((item) => item > 3)); //returns first much
