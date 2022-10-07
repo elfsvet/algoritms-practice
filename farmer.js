@@ -12,3 +12,4 @@ for (let i = 3; i<=y; i++) {
 
 }
 console.log(w)
+
