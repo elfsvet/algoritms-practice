@@ -14,6 +14,6 @@ const calculateHourFromYear = (year) => {
 };
 
 console.log(calculateYearFromHour(53));
-console.log(calculateHourFromYear(109440));
+console.log(calculateHourFromYear(80000));
 
 console.log(workingHoursInYear()/8);
