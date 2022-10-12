@@ -65,3 +65,61 @@ const MONEY_TABLE = {
   checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
   // checkCashRegister(19.5, 20, [["PENNY",0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
   console.log(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))
+
+  /*
+  const DENOMINATIONS = {
+  PENNY: 1,
+  NICKEL: 5,
+  DIME: 10,
+  QUARTER: 25,
+  ONE: 100,
+  FIVE: 500,
+  TEN: 1000,
+  TWENTY: 2000,
+  'ONE HUNDRED': 10000,
+}
+function checkCashRegister(price, cash, cid) {
+  // how much change we should give back to customer in cents
+  let changeInCents = (cash - price) * 100;
+  // console.log(changeInCents);
+  // console.log()
+  // console.log()
+  // console.log()
+  let centsInCid = cid.reduce((acc, [, value]) => {
+    return acc + value * 100;
+  }, 0)
+  // if we have the same amount of money in cash in drawer return the cash and closed the shop.
+  if (centsInCid === changeInCents) {
+    return { status: "CLOSED", change: cid }
+  }
+
+
+  const changeInHand = cid.reverse().map(([name, valueInSlot]) => {
+
+    let total = 0;
+    // look up the denomination
+    const denomination = DENOMINATIONS[name];
+    console.log(name, denomination)
+    let valueCents = valueInSlot * 100
+    // Loop: while the change due is worth more than the money type is worth, and while we still have money of that type in the drawer
+    while (valueCents > 0 && denomination <= changeInCents) {
+      total += denomination;
+      changeInCents -= denomination;
+      valueCents -= denomination;
+      console.log({ name, total, changeInCents, valueCents })
+    }
+return [name,total/100]
+  })
+  .filter(([,value])=> value>0)
+
+console.log(changeInHand)
+if(changeInCents> 0) {
+  return {status: 'INSUFFICIENT_FUNDS',change: []}
+}
+return {status:"OPEN", change: changeInHand}
+
+
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+  */
