@@ -13,7 +13,13 @@ const calculateHourFromYear = (year) => {
   return year / workingHoursInYear();
 };
 
-console.log(calculateYearFromHour(53));
-console.log(calculateHourFromYear(80000));
+const calculateDayEarnings = (hourRate, workDayHours = 8) => {
+  return hourRate * workDayHours
+}
 
+console.log(calculateYearFromHour(100));
+console.log(calculateHourFromYear(110000));
+console.log(calculateHourFromYear(300000));
 console.log(workingHoursInYear()/8);
+console.log(calculateDayEarnings(57))
+console.log(calculateDayEarnings(100))
