@@ -1,11 +1,11 @@
 const reverseCapitalization = (str) => {
   // create and empty
   let result = '';
-// take a single letter
+  // take a single letter
   for (let character of str) {
     // create new variable to update later
     let newChar = character;
-    // if the character equals the uppercase version of it then it's uppercased already and we would change it to lower case and assign to the new character and 
+    // if the character equals the uppercase version of it then it's uppercased already and we would change it to lower case and assign to the new character and
     if (character.toUpperCase() === character) {
       newChar = character.toLowerCase();
     } else {
@@ -21,3 +21,16 @@ const reverseCapitalization = (str) => {
 };
 
 console.log(reverseCapitalization('hEEEEEllOOO iT'));
+
+//  or shorter version with ternary
+const shortDeCapitalizor = (str) => {
+  return [...str]
+    .map((letter) =>
+      letter === letter.toUpperCase()
+        ? letter.toLowerCase()
+        : letter.toUpperCase()
+    )
+    .join('');
+};
+
+console.log(shortDeCapitalizor('mAmA WAS here!'))
